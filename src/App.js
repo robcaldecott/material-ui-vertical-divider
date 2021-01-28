@@ -45,6 +45,16 @@ function App() {
         </Grid>
         <Grid item>Item</Grid>
       </Grid>
+
+      {/* This works but I lose the grid spacing, etc. */}
+      <Grid container spacing={2} alignItems="center">
+        <Grid item>
+          <div>Item</div>
+          <div>Item</div>
+        </Grid>
+        <Divider orientation="vertical" flexItem />
+        <Grid item>Item</Grid>
+      </Grid>
     </Container>
   );
 }
