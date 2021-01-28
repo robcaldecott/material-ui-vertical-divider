@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container, Grid, Divider } from "@material-ui/core";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Grid container spacing={2}>
+        <Grid item>Item</Grid>
+        <Grid item>
+          <Divider orientation="vertical" />
+        </Grid>
+        <Grid item>Item</Grid>
+      </Grid>
+
+      <Grid container spacing={2}>
+        <Grid item>
+          <div>Item</div>
+          <div>Item</div>
+        </Grid>
+        <Grid item>
+          <Divider orientation="vertical" />
+        </Grid>
+        <Grid item>Item</Grid>
+      </Grid>
+
+      {/* This does not work */}
+      <Grid container spacing={2} alignItems="center">
+        <Grid item>
+          <div>Item</div>
+          <div>Item</div>
+        </Grid>
+        <Grid item>
+          <Divider orientation="vertical" />
+        </Grid>
+        <Grid item>Item</Grid>
+      </Grid>
+
+      {/* This does not work */}
+      <Grid container spacing={2} alignItems="center">
+        <Grid item>
+          <div>Item</div>
+          <div>Item</div>
+        </Grid>
+        <Grid item>
+          <Divider orientation="vertical" flexItem />
+        </Grid>
+        <Grid item>Item</Grid>
+      </Grid>
+    </Container>
   );
 }
 
